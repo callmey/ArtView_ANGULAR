@@ -7,19 +7,18 @@ export class User {
     phone: string;
     email: string;
     age: number;
-    userType: userType;
+    userType: number;
 
-    constructor (id, fav_artfield_id, login_id, pwd, name, phone, email,
-        int age){
+    constructor (id, fav_district_id, login_id, pwd, name, phone, email, age, userType){
             
             this.id = id;
-            this.fav_artfield_id = fav_artfield_id;
+            this.fav_district_id = fav_district_id;
             this.login_id = login_id;
             this.pwd = pwd;
             this.name = name;
             this.phone = phone;
             this.email = email;
             this.age = age;
-            this.userType =UserType.NORMAL;;
+            this.userType = userType;
     }
 }
