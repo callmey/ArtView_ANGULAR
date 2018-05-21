@@ -1,37 +1,26 @@
 <head>
   <title>ArtView</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-		<nav id="nav1" class="navbar navbar-inverse">
+		<nav class="navbar navbar-default" id="nav1">
 				<div class="container-fluid">
 				  <div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>                        
-					</button>
-					<a class="navbar-brand" href="#">Logo</a>
-				  </div>
-				  <div class="collapse navbar-collapse" id="myNavbar">
+					<img src="/assets/images/ArtViewLogo.png" alt="" style="width:50px; height:50px;" />
+          </div>
 					<ul class="nav navbar-nav">
 					  <li class="active"><a href="#">Home</a></li>
-					  <li><a href="#">Products</a></li>
-					  <li><a href="#">Deals</a></li>
-					  <li><a href="#">Stores</a></li>
-					  <li><a href="#">Contact</a></li>
+					  <li><a href="#">전시목록</a></li>
+					  <li><a href="#">커뮤니티</a></li>
+					  <li><a href="#">대관신청</a></li>
+					  <li><a href="#">Q&A</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-					  <li><a routerLink="/login"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-					  <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					    <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 					</ul>
 				  </div>
-				</div>
-			  </nav>
+		</nav>
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -39,17 +28,8 @@
   </div>
 </div>
 
-<nav id="nav2"class="navbar navbar-inverse">
+<nav id="nav2" class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <img src="/assets/images/ArtViewLogo.png" alt="" style="width:20px; height:20px;"/>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">Products</a></li>
@@ -60,7 +40,6 @@
       <!--<ul class="nav navbar-nav navbar-right">
 
       </ul>-->
-    </div>
   </div>
 </nav>
 
