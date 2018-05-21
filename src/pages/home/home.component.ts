@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+//import { NgModule } from '@angular/core';
+//import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { Router }   from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,7 @@ import { Router }   from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor() {}
   
     ngOnInit() {
     }
