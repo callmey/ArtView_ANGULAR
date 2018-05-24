@@ -7,12 +7,16 @@ import { Routes, RouterModule, Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { HomeComponent } from '../pages/home/home.component';
+import { MuseumComponent } from '../pages/museum/museum.component';
 import { UserService } from '../services/user.service';
+import { MuseumService } from '../services/museum.service';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MuseumComponent
   ],
   imports: [
     BrowserModule,
@@ -22,10 +26,11 @@ import { UserService } from '../services/user.service';
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'museum', component: MuseumComponent },
     ])
 ,
   ],
-  providers: [UserService],
+  providers: [UserService, MuseumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
