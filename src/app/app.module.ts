@@ -10,7 +10,10 @@ import { HomeComponent } from '../pages/home/home.component';
 import { MuseumComponent } from '../pages/museum/museum.component';
 import { UserService } from '../services/user.service';
 import { MuseumService } from '../services/museum.service';
-import { CreateComponent } from '../pages/create/create.component';
+import { CreateComponent } from '../pages/create/create1/create.component';
+import { Create2Component } from '../pages/create/create2/create2.component';
+import { Create3Component } from '../pages/create/create3/create3.component';
+import { Create4Component } from '../pages/create/create4/create4.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CreateComponent } from '../pages/create/create.component';
     LoginComponent,
     HomeComponent,
     MuseumComponent,
-    CreateComponent
+    CreateComponent,
+    Create2Component,
+    Create3Component,
+    Create4Component
   ],
   imports: [
     BrowserModule,
