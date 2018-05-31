@@ -27,12 +27,13 @@
         <div><img src="/assets/images/ArtViewLogo.png" alt="" style="width:80px; height:80px;" /></div>
         <img src="/assets/images/ArtView.png" alt="" style="width:250px; height:70px;" />
 				<h4>Log in to your account.</h4>
+				<hr>
 			</div>			
 			<input type="email" [(ngModel)]="login.login_id" placeholder="Id" required class="form-control input-lg" />
 			<input type="password" [(ngModel)]="login.pwd" placeholder="Password" required class="form-control input-lg" />
 			<button type="submit" name="submit" class="btn btn-lg btn-block btn-info">Sign in</button>
 			<div>
-				<a href="#">Create account</a> or <a href="#">reset password</a>
+				<a routerLink="/create">Create account</a> or <a href="#">reset password</a>
 			</div>
 		</form>
 		</section>

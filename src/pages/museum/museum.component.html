@@ -1,28 +1,28 @@
 
 <body>
 <div class="container">
-  <h1>학생목록</h1>
+  <h1>전시목록</h1>
   <div class="pull-right mb5">
   <a href="create.do" class="btn btn-info">
-    <span class="glyphicon glyphicon-user"></span> 학생등록</a>
+    <span class="glyphicon glyphicon-user"></span> 전시등록</a>
   </div>    
   <table class="table table-bordered mt5">
     <thead>
       <tr>
-        <th>id</th>
-        <th>학번</th>
-        <th>이름</th>
-        <th>학과</th>
-        <th>학년</th>
+        <th>전시주제</th>
+        <th>링크</th>
+        <th>사진</th>
+        <th>가격</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let m of museums">
-          <td>{{ m.title }}</td>
-          <td>{{ m.link }}</td>
-          <td>{{ m.image }}</td>
-          <td>{{ m.price }}</td>
-      </tr>
+        <td class="col-sm-4"> </td>
+          <td class="panel panel-success"></td>
+            <td class="panel-heading">{{ m.title }}</td>
+            <td class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></td>
+            <td class="panel-footer">{{ m.link }} {{ m.price }}</td>
+       </tr>
     </tbody>
   </table>
 </div>

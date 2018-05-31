@@ -10,13 +10,15 @@ import { HomeComponent } from '../pages/home/home.component';
 import { MuseumComponent } from '../pages/museum/museum.component';
 import { UserService } from '../services/user.service';
 import { MuseumService } from '../services/museum.service';
+import { CreateComponent } from '../pages/create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MuseumComponent
+    MuseumComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { MuseumService } from '../services/museum.service';
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      { path: 'create', component: CreateComponent },
       { path: 'login', component: LoginComponent },
       { path: 'museum', component: MuseumComponent },
     ])
