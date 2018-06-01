@@ -4,16 +4,17 @@ nav a {
     color: white;
 
   }
+
+#active {
+  color: rgb(148, 34, 34);
+}
   
 #nav1 {
   background: linear-gradient(to bottom right, rgb(247, 179, 162) , rgb(180, 69, 69));
   border-color: hsl(0, 84%, 44%);
+  margin-bottom: 0%;
 }
-  #nav2 {
-    text-align: center;
-    border-radius: 0;
-    width: 60%;
-    height: 70px;
-    margin: -30px auto 30px auto;
-    border-color: hsl(0, 84%, 44%);
-  }
+
+nav {
+  background: transparent;
+}
