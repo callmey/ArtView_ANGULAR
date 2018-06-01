@@ -1,0 +1,19 @@
+nav a {
+    margin-bottom: 0;
+    border-radius: 0;
+    color: white;
+
+  }
+  
+#nav1 {
+  background: linear-gradient(to bottom right, rgb(247, 179, 162) , rgb(180, 69, 69));
+  border-color: hsl(0, 84%, 44%);
+}
+  #nav2 {
+    text-align: center;
+    border-radius: 0;
+    width: 60%;
+    height: 70px;
+    margin: -30px auto 30px auto;
+    border-color: hsl(0, 84%, 44%);
+  }

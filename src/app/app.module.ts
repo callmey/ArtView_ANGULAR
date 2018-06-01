@@ -14,6 +14,8 @@ import { CreateComponent } from '../pages/create/create1/create.component';
 import { Create2Component } from '../pages/create/create2/create2.component';
 import { Create3Component } from '../pages/create/create3/create3.component';
 import { Create4Component } from '../pages/create/create4/create4.component';
+import { NavComponent } from '../pages/home/nav/nav.component';
+import { FooterComponent } from '../pages/home/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { Create4Component } from '../pages/create/create4/create4.component';
     CreateComponent,
     Create2Component,
     Create3Component,
-    Create4Component
+    Create4Component,
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -3,24 +3,7 @@
   <meta charset="utf-8">
 </head>
 <body>
-        <nav class="navbar navbar-default" id="nav1">
-                <div class="container-fluid">
-                  <div class="navbar-header">
-                    <img src="/assets/images/ArtViewLogo.png" alt="" style="width:50px; height:50px;" />
-          </div>
-                    <ul class="nav navbar-nav">
-                      <li class="active"><a routerLink="/home">Home</a></li>
-                      <li><a routerLink="/museum">전시목록</a></li>
-                      <li><a href="#">커뮤니티</a></li>
-                      <li><a href="#">대관신청</a></li>
-                      <li><a href="#">QnA</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-              <li><a routerLink="/create"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-                    </ul>
-                  </div>
-        </nav>
+<app-nav></app-nav>
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -95,11 +78,5 @@
   </div>
 </div><br><br>
 
-<footer class="container-fluid text-center">
-  <p>Online Store Copyright</p>  
-  <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-  </form>
-</footer>
+<app-footer></app-footer>
 </body>
