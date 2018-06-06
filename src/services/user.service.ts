@@ -27,7 +27,7 @@ export class UserService {
     .catch(this.handleError);
   }
 
-  public getUsers(): Observable<any> {
+  public login(): Observable<any> {
     return this.http.get(this.userUrl + 'login');
   }
 
