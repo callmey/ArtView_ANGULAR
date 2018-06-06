@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule, Router } from '@angular/router';
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from '../pages/login/login.component';
@@ -28,12 +29,13 @@ import { FooterComponent } from '../pages/home/footer/footer.component';
     Create3Component,
     Create4Component,
     NavComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
