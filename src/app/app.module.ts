@@ -14,13 +14,16 @@ import { HomeComponent } from '../pages/home/home.component';
 import { MuseumComponent } from '../pages/museum/museum.component';
 import { UserService } from '../services/user.service';
 import { MuseumService } from '../services/museum.service';
-import { CreateComponent } from '../pages/create/create1/create.component';
-import { Create2Component } from '../pages/create/create2/create2.component';
-import { Create3Component } from '../pages/create/create3/create3.component';
-import { Create4Component } from '../pages/create/create4/create4.component';
+import { CreateComponent } from '../pages/create1/create.component';
+import { ArtistComponent } from '../pages/create2/artist/artist.component';
+import { ProviderComponent } from '../pages/create2/provider/provider.component';
+import { NomalComponent } from '../pages/create2/normal/normal.component';
+import { Create3Component } from '../pages/create3/create3.component';
+import { Create4Component } from '../pages/create4/create4.component';
 import { NavComponent } from '../pages/home/nav/nav.component';
 import { FooterComponent } from '../pages/home/footer/footer.component';
 import { TokenStorage } from '../services/token.storage';
+
 
 
 @NgModule({
@@ -30,11 +33,13 @@ import { TokenStorage } from '../services/token.storage';
     HomeComponent,
     MuseumComponent,
     CreateComponent,
-    Create2Component,
     Create3Component,
     Create4Component,
     NavComponent,
     FooterComponent,
+    ArtistComponent,
+    ProviderComponent,
+    NomalComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,7 @@ import { TokenStorage } from '../services/token.storage';
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'create', component: CreateComponent },
+      { path: 'normal', component: NomalComponent },
       { path: 'login', component: LoginComponent },
       { path: 'museum', component: MuseumComponent },
     ])
