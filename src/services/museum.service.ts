@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http }       from '@angular/http';
-//import 'rxjs/add/operator/toPromise';
 import { MuseumComponent } from '../pages/museum/museum.component';
 import { Item } from '../models/item';
 
