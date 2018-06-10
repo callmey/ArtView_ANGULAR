@@ -1,48 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../../src/models/user';
-import {MatTableDataSource} from '@angular/material';
-import {UserService} from '../../services/user.service';
 import {Router} from '@angular/router';
-import { FormGroup, FormBuilder } from '@angular/forms';  
+import {MatDialog} from '@angular/material';
+import {TokenStorage} from '../../services/token.storage';
+import {UserService} from '../../services/user.service';
+import {FormGroup, FormBuilder, Validators, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-form:FormGroup;
+export class LoginComponent {
+/*
+  form:FormGroup;
 
-displayedColumns = ['id', 'fav_district_id', 'login_id', 'pwd','name','phone','email','age','userType'];
-  dataSource = new MatTableDataSource();
-  constructor(private router: Router, private userService: UserService, private fb:FormBuilder) {
-  }
+    constructor(private fb:FormBuilder, 
+                 private userService: UserService, 
+                 private router: Router) {
 
-  ngOnInit(): void {
-    this.userService.login().subscribe(
-      data => {
-        this.dataSource.data = data;
-      }
+        this.form = this.fb.group({
+            email: ['',Validators.required],
+            password: ['',Validators.required]
+        });
+    }
 
-    );
+    login() {
+        const val = this.form.value;
 
-    /*this.form = this.fb.group({
-      login_id: ['',Validators.required],
-      pwd: ['',Validators.required]
-    });*/
-
-   /* login() {
-      const val = this.form.value;
-
-      if (val.login_id && val.pwd) {
-          this.userService.login()
-              .subscribe(
-                  () => {
-                      console.log("User is logged in");
-                      this.router.navigateByUrl('/');
-                  }
-          );
+        if (val.login_id && val.pwd) {
+            this.userService.login(val.login_id, val.pwd)
+                .subscribe(
+                    () => {
+                        console.log("User is logged in");
+                        this.router.navigateByUrl('home');
+                    }
+                );
         }
-    }*/ 
+    }*/
+
+  
+  constructor(private router: Router, public dialog: MatDialog, private userService: UserService, private token: TokenStorage) {
   }
-}
+
+  login_id: string;
+  pwd: string;
+
+  login(): void {
+    this.userService.attemptAuth(this.login_id, this.pwd).subscribe(
+      data => {
+        this.token.saveToken(data.token);
+        this.router.navigate(['home']);
+      }
+    );
+  }
+  }

@@ -29,8 +29,8 @@
 				<h4>Log in to your account.</h4>
 				<hr>
 			</div>			
-			<input type="email" [(ngModel)]="login.login_id" placeholder="Id" required class="form-control input-lg" />
-			<input type="password" [(ngModel)]="login.pwd" placeholder="Password" required class="form-control input-lg" />
+			<input type="login_id" [(ngModel)]="login.login_id" name="login_id" placeholder="Id" required class="form-control input-lg" />
+			<input type="password" [(ngModel)]="login.pwd" name="pwd" placeholder="Password" required class="form-control input-lg" />
 			<button type="submit" (click)="login()" class="btn btn-lg btn-block btn-info">Sign in</button>
 			<div>
 				<a routerLink="/create">Create account</a> or <a href="#">reset password</a>

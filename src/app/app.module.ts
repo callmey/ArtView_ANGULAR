@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from '../pages/login/login.component';
@@ -17,6 +20,8 @@ import { Create3Component } from '../pages/create/create3/create3.component';
 import { Create4Component } from '../pages/create/create4/create4.component';
 import { NavComponent } from '../pages/home/nav/nav.component';
 import { FooterComponent } from '../pages/home/footer/footer.component';
+import { TokenStorage } from '../services/token.storage';
+
 
 @NgModule({
   declarations: [
@@ -34,8 +39,10 @@ import { FooterComponent } from '../pages/home/footer/footer.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     HttpClientModule,
+    MatDialogModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
@@ -45,7 +52,7 @@ import { FooterComponent } from '../pages/home/footer/footer.component';
     ])
 ,
   ],
-  providers: [UserService, MuseumService],
+  providers: [UserService, MuseumService,TokenStorage],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
