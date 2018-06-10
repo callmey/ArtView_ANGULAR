@@ -23,6 +23,7 @@ import { Create4Component } from '../pages/create4/create4.component';
 import { NavComponent } from '../pages/home/nav/nav.component';
 import { FooterComponent } from '../pages/home/footer/footer.component';
 import { TokenStorage } from '../services/token.storage';
+import { Interceptor} from './app.interceptor';
 
 
 
@@ -58,7 +59,7 @@ import { TokenStorage } from '../services/token.storage';
     ])
 ,
   ],
-  providers: [UserService, MuseumService,TokenStorage],
+  providers: [UserService, MuseumService,TokenStorage,Interceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

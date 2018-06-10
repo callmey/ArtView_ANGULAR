@@ -22,20 +22,26 @@
 	
 	<section class="container">
 	    <section class="login-form">
-		<form method="post" action="" role="login">
-			<div>
-        <div><img src="/assets/images/ArtViewLogo.png" alt="" style="width:80px; height:80px;" /></div>
-        <img src="/assets/images/ArtView.png" alt="" style="width:250px; height:70px;" />
-				<h4>Log in to your account.</h4>
-				<hr>
-			</div>			
-			<input type="login_id" [(ngModel)]="login.login_id" name="login_id" placeholder="Id" required class="form-control input-lg" />
-			<input type="password" [(ngModel)]="login.pwd" name="pwd" placeholder="Password" required class="form-control input-lg" />
-			<button type="submit" (click)="login()" class="btn btn-lg btn-block btn-info">Sign in</button>
-			<div>
-				<a routerLink="/create">Create account</a> or <a href="#">reset password</a>
-			</div>
-		</form>
+				<form role="login">
+					<div><img src="/assets/images/ArtViewLogo.png" alt="" style="width:80px; height:80px;" /></div>
+					<div><img src="/assets/images/ArtView.png" alt="" style="width:250px; height:70px;" /></div>
+					<div><h4>Log in to your account.</h4></div>
+					<hr>
+				
+							<div class="form-field">		
+							<input type="login_id" [(ngModel)]="login_id" name="login_id" placeholder="Id" required class="form-control input-lg" />
+							</div>
+							
+							<div class="form-field">	
+							<input type="password" [(ngModel)]="pwd" name="pwd" placeholder="Password" required class="form-control input-lg" />
+							</div>
+					<div class="form-buttons">
+						<button type="submit" (click)="login()" class="btn btn-lg btn-block btn-info">Sign in</button>
+					</div>	
+					<div>
+						<a routerLink="/create">Create account</a> or <a href="#">reset password</a>
+					</div>
+				</form>
 		</section>
 	</section>
 </body>

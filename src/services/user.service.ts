@@ -34,6 +34,8 @@ export class UserService {
     console.log('attempAuth ::');
     return this.http.post('http://localhost:8080/art-view/login', credentials);
   }
+
+  
   /*
   login(email:string, password:string ) {
     return this.http.post<User>('/api/login', {email, password})

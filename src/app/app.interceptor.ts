@@ -6,10 +6,8 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import {TokenStorage} from "../services/token.storage";//custom implementation for localstorage
 import { map, filter, tap } from 'rxjs/operators';
-import "rxjs/add/operator/do";
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+
+
 
 const TOKEN_HEADER_KEY = 'Authorization';
 
@@ -21,7 +19,7 @@ constructor(private token: TokenStorage, private router: Router) { }
 intercept(req: HttpRequest<any>,
     next: HttpHandler): Observable<HttpEvent<any>> {
 
-const idToken = localStorage.getItem("id_token");
+/*const idToken = TokenStorage.getItem("id_token");
 
 if (idToken) {
   const cloned = req.clone({
@@ -35,15 +33,15 @@ else {
   return next.handle(req);
 }
 }
-}
+}*/
 /*
 intercept(req: HttpRequest<any>, next: HttpHandler):
-Observable <HttpSentEvent | HttpHeaderResponse | HttpProgressEvent | HttpResponse<any> | HttpUserEvent<any>> {
-var authReq = req;
+Observable <HttpSentEvent | HttpHeaderResponse | HttpProgressEvent | HttpResponse<any> | HttpUserEvent<any>> {*/
+let authReq = req;
 
 
     if (this.token.getToken() != null) {
-        authReq = req.clone({ headers: req.headers.set(TOKEN_HEADER_KEY, 'Bearer ' + this .token.getToken())});
+        authReq = req.clone({ headers: req.headers.set(TOKEN_HEADER_KEY, 'Bearer ' + this.token.getToken())});
     }
 
   /*return next.handle(req).map((event: HttpEvent<any>) => {
@@ -51,7 +49,7 @@ var authReq = req;
       // do stuff with response and headers you want
     }
     return event; 
-  });
+  });*/
 
     return next.handle(authReq).pipe(tap(event => {
     if (event instanceof HttpResponse) {
@@ -72,4 +70,4 @@ var authReq = req;
     ));
 }
 
-}*/
+}
