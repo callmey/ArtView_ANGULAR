@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http }       from '@angular/http';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
-//import 'rxjs/add/operator/toPromise';
 import { LoginComponent } from '../pages/login/login.component';
 import { User } from '../models/user';
 import {Observable} from 'rxjs';
@@ -14,7 +13,6 @@ const httpOptions = {
 @Injectable()
 export class UserService {
     private URL ="http://localhost:8080/art-view/api/";
-    private userUrl = "http://localhost:8080/art-view/"
 
     constructor(private http: HttpClient) { 
     }
@@ -27,10 +25,22 @@ export class UserService {
     .catch(this.handleError);
   }
 
-  public login(): Observable<any> {
-    return this.http.get(this.userUrl + 'login');
-  }
+  /*public getUsers(): Observable {
+    return this.http.get(this.URL + 'list');
+  }*/
 
+  attemptAuth(login_id: string, pwd: string): Observable<any> {
+    const credentials = {login_id: login_id, pwd: pwd};
+    console.log('attempAuth ::');
+    return this.http.post('http://localhost:8080/art-view/login', credentials);
+  }
+  /*
+  login(email:string, password:string ) {
+    return this.http.post<User>('/api/login', {email, password})
+        // this is just the HTTP call, 
+        // we still need to handle the reception of the token
+        .toPromise();
+  }*/
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
