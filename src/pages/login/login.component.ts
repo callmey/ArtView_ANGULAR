@@ -21,7 +21,7 @@ export class LoginComponent {
   login(): void {
         this.userService.attemptAuth(this.login_id, this.pwd).subscribe(
       data => {
-        this.token.saveToken(data.token);
+        this.token.saveToken(this.token.getToken());
         this.router.navigate(['home']);
       }
     );

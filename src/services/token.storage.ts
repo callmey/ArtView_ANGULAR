@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 
-const TOKEN_KEY = 'SecretKeyToGenJWTs';
+const TOKEN_KEY = 'Authtoken';
 
 @Injectable()
 export class TokenStorage {
@@ -12,6 +12,11 @@ export class TokenStorage {
     window.sessionStorage.removeItem(TOKEN_KEY);
     window.sessionStorage.clear();
   }
+
+  /*public getDecodedToken(): string { 
+    const token: string = window.sessionStorage.getItem('msal.idtoken'); 
+    var decodedToken = this.jwt.decodeToken(token) return decodedToken;
+ }*/
 
   public saveToken(token: string) {
     window.sessionStorage.removeItem(TOKEN_KEY);
