@@ -3,6 +3,7 @@ import { Http }       from '@angular/http';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginComponent } from '../pages/login/login.component';
 import { User } from '../models/user';
+import { Age } from '../models/Age';
 import {Observable} from 'rxjs';
 
 
@@ -14,15 +15,23 @@ const httpOptions = {
 export class UserService {
     private URL ="http://localhost:8080/art-view/api/";
 
-    constructor(private http: HttpClient) { 
+    constructor(private http: HttpClient, private Http: Http) { 
     }
 
   SignUp(user: User): Promise<string> {
     let url = this.URL + 'sign-up';
-    return this.http.post(url, user)
+    return this.Http.post(url, user)
     .toPromise()
-    //.then(response => response.text() as string)
+    .then(response => response.text() as string)
     .catch(this.handleError);
+  }
+
+  getAges(): Promise<Age[]> {
+    return this.Http.get(this.URL + "ages")
+    .toPromise()
+    .then(response => response.json() as Age[])
+    .catch(this.handleError);
+
   }
 
   /*public getUsers(): Observable {

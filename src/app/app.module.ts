@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule, MatInputModule, MatSelectModule } from 
+   '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -49,6 +51,9 @@ import { Interceptor} from './app.interceptor';
     HttpModule,
     HttpClientModule,
     MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
