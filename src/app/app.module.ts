@@ -26,6 +26,7 @@ import { NavComponent } from '../pages/home/nav/nav.component';
 import { FooterComponent } from '../pages/home/footer/footer.component';
 import { TokenStorage } from '../services/token.storage';
 import { Interceptor} from './app.interceptor';
+import { UserComponent } from '../pages/create2/user/user.component';
 
 
 
@@ -43,6 +44,7 @@ import { Interceptor} from './app.interceptor';
     ArtistComponent,
     ProviderComponent,
     NomalComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,8 @@ import { Interceptor} from './app.interceptor';
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'create', component: CreateComponent },
+      { path: 'artist', component: ArtistComponent },
+      { path: 'provider', component: ProviderComponent },
       { path: 'normal', component: NomalComponent },
       { path: 'login', component: LoginComponent },
       { path: 'museum', component: MuseumComponent },
