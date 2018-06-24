@@ -1,6 +1,33 @@
 <app-nav></app-nav>
 <router-outlet></router-outlet>
 <app-user></app-user>
+<body>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">관심 예술분야: </label>
+        <div class="col-sm-3">
+            <div *ngFor="let a of artfield"><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artfield.id"/>{{a.type}}</span></div>
+            <!--<div><span> <input type="checkbox" ng-checked="isChecked"/> 공연</span></div>
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 공예</span></div>
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 디자인</span></div>
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 문예</span></div>
+        </div>  
+        <div class="col-sm-3">
+          <div><span> <input type="checkbox" ng-checked="isChecked"/> 미술</span></div>
+          <div><span> <input type="checkbox" ng-checked="isChecked"/> 사진</span></div>
+          <div><span> <input type="checkbox" ng-checked="isChecked"/> 애니메이션</span></div>
+          <div><span> <input type="checkbox" ng-checked="isChecked"/> 영화</span></div>
+          <div><span> <input type="checkbox" ng-checked="isChecked"/> 예술가</span></div>
+        </div>
+        <div class="col-sm-3">
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 음악</span></div>
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 작품</span></div>
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 장르</span></div>
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 창작물</span></div>
+            <div><span> <input type="checkbox" ng-checked="isChecked"/> 평론가</span></div>
+        </div>-->
+        </div>
+    </div>
+</body>
 <app-footer></app-footer>
 
 

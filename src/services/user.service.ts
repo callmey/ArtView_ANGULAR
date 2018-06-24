@@ -5,6 +5,7 @@ import { LoginComponent } from '../pages/login/login.component';
 import { User } from '../models/user';
 import { Age } from '../models/Age';
 import {Observable} from 'rxjs';
+import { Artfield } from '../models/artfield';
 
 
 const httpOptions = {
@@ -32,6 +33,13 @@ export class UserService {
     .then(response => response.json() as Age[])
     .catch(this.handleError);
 
+  }
+
+  getArtfield(): Promise<Artfield[]> {
+    return this.Http.get(this.URL + "artfields")
+    .toPromise()
+    .then(response => response.json() as Artfield[])
+    .catch(this.handleError);
   }
 
   /*public getUsers(): Observable {
