@@ -27,6 +27,8 @@ import { FooterComponent } from '../pages/home/footer/footer.component';
 import { TokenStorage } from '../services/token.storage';
 import { Interceptor} from './app.interceptor';
 import { UserComponent } from '../pages/create2/user/user.component';
+import { CommunityComponent } from '../pages/community/community.component';
+import { SpaceComponent } from '../pages/space/space.component';
 
 
 
@@ -45,6 +47,8 @@ import { UserComponent } from '../pages/create2/user/user.component';
     ProviderComponent,
     NomalComponent,
     UserComponent,
+    CommunityComponent,
+    SpaceComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +69,8 @@ import { UserComponent } from '../pages/create2/user/user.component';
       { path: 'normal', component: NomalComponent },
       { path: 'login', component: LoginComponent },
       { path: 'museum', component: MuseumComponent },
+      { path: 'community', component: CommunityComponent },
+      { path: 'space', component: SpaceComponent },
     ])
 ,
   ],
