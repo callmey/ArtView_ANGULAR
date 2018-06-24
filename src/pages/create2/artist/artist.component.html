@@ -1,32 +1,33 @@
 <app-nav></app-nav>
 <router-outlet></router-outlet>
 <app-user></app-user>
-<body>
-    <div class="container text-center">
+<div class="container text-center">
         <form class="form-horizontal">
             <div class="form-group text-center">
                 <label class="col-sm-2 control-label">전공분야: </label>
-                <div class="col-sm-3">
-                    <div *ngFor="let a of majors"><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
+                <div *ngFor="let a of majors; let i=index">
+                    <div class="col-sm-3" *ngIf="i<=5">
+                        <div><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
+                    </div>
+                    <div class="col-sm-3" *ngIf="5<i<=10">
+                        <div><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
+                    </div>
+                    <div class="col-sm-3" *ngIf="10<i<=15">
+                        <div><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
+                    </div>
                 </div>
             </div>
-            <!--<div class="form-group text-center">
-                <label class="col-sm-4 control-label"> </label>
-                <div class="col-sm-4 text-center">
-                    <input class="form-control" (ngModel)="artist.career" name="career" type="text" placeholder="아이디를 입력하세요." required>
-                </div>
-            </div>-->
             <div class="form-group">
                 <label for="focuedSelect" class="col-sm-4 control-label">대관 선호지역</label>
                 <div class="col-sm-2">
-                <select id="focuedSelect" class="form-control" (ngModel)="city.id">
-                    <option selected="selected"></option>
+                <select class="form-control" (ngModel)="city.id">
+                    <option selected="selected">지역(도) 선택</option>
                     <option *ngFor="let c of cities" [ngValue]="c.id" required>{{c.name}}</option>
                 </select>
                 </div>
                 <div class="col-sm-2">
-                    <select id="focuedSelect" class="form-control" (ngModel)="district.id">
-                        <option selected="selected"></option>
+                    <select class="form-control" (ngModel)="district.id">
+                        <option selected="selected">지역(구) 선택</option>
                         <option *ngFor="let d of districts" [ngValue]="d.id" required>{{d.name}}</option>
                     </select>
                 </div>
@@ -57,5 +58,4 @@
             <div><span> <input type="checkbox" ng-checked="isChecked"/> 창작물</span></div>
             <div><span> <input type="checkbox" ng-checked="isChecked"/> 평론가</span></div>
         </div>-->
-</body>
 <app-footer></app-footer>

@@ -17,6 +17,7 @@ export class ArtistComponent implements OnInit {
 
   constructor(userService: UserService) {
     this.userService = userService;
+
    }
   ngOnInit() {
     this.userService.getArtfield().then(
