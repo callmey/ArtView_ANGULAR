@@ -7,7 +7,7 @@
             <div class="form-group text-center">
                 <label class="col-sm-2 control-label">전공분야: </label>
                 <div class="col-sm-3">
-                    <div *ngFor="let a of artfield"><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
+                    <div *ngFor="let a of majors"><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
                 </div>
             </div>
             <!--<div class="form-group text-center">
@@ -18,20 +18,21 @@
             </div>-->
             <div class="form-group">
                 <label for="focuedSelect" class="col-sm-4 control-label">대관 선호지역</label>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                 <select id="focuedSelect" class="form-control" (ngModel)="city.id">
                     <option selected="selected"></option>
-                    <option *ngFor="let c of city" [ngValue]="c.id" required>{{c.name}}</option>
+                    <option *ngFor="let c of cities" [ngValue]="c.id" required>{{c.name}}</option>
                 </select>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <select id="focuedSelect" class="form-control" (ngModel)="district.id">
                         <option selected="selected"></option>
-                        <option *ngFor="let d of district" [ngValue]="d.id" required>{{d.name}}</option>
+                        <option *ngFor="let d of districts" [ngValue]="d.id" required>{{d.name}}</option>
                     </select>
                 </div>
             </div>     
         </form>
+        <a class="btn btn-primary" (click)="create()">저장</a>
     </div>
     <!--<div class="form-group">
         <label class="col-sm-2 control-label">전공분야: </label>
@@ -56,7 +57,5 @@
             <div><span> <input type="checkbox" ng-checked="isChecked"/> 창작물</span></div>
             <div><span> <input type="checkbox" ng-checked="isChecked"/> 평론가</span></div>
         </div>-->
-        </div>
-    </div>
 </body>
 <app-footer></app-footer>

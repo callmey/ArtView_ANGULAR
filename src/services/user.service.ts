@@ -4,6 +4,8 @@ import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http'
 import { LoginComponent } from '../pages/login/login.component';
 import { User } from '../models/user';
 import { Age } from '../models/Age';
+import { City } from '../models/City';
+import { District } from '../models/District';
 import {Observable} from 'rxjs';
 import { Artfield } from '../models/artfield';
 
@@ -39,6 +41,20 @@ export class UserService {
     return this.Http.get(this.URL + "artfields")
     .toPromise()
     .then(response => response.json() as Artfield[])
+    .catch(this.handleError);
+  }
+
+  getCity(): Promise<City[]>{
+    return this.Http.get(this.URL + "cities")
+    .toPromise()
+    .then(response => response.json() as City[])
+    .catch(this.handleError);
+  }
+
+  getDistrict(): Promise<District[]>{
+    return this.Http.get(this.URL + "districts")
+    .toPromise()
+    .then(response => response.json() as District[])
     .catch(this.handleError);
   }
 
