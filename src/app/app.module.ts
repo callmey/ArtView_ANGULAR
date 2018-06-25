@@ -67,6 +67,7 @@ import { SpaceComponent } from '../pages/space/space.component';
       { path: 'artist', component: ArtistComponent },
       { path: 'provider', component: ProviderComponent },
       { path: 'normal', component: NomalComponent },
+      { path: 'create3', component: Create3Component },
       { path: 'login', component: LoginComponent },
       { path: 'museum', component: MuseumComponent },
       { path: 'community', component: CommunityComponent },
