@@ -58,6 +58,7 @@ export class UserService {
     .catch(this.handleError);
   }
 
+
   /*public getUsers(): Observable {
     return this.http.get(this.URL + 'list');
   }*/

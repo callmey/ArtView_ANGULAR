@@ -3,6 +3,8 @@ import { UserService } from '../../../services/user.service';
 import { Artfield } from '../../../models/artfield';
 import { City } from '../../../models/city';
 import { District } from '../../../models/district';
+import { User } from '../../../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-artist',
@@ -15,7 +17,7 @@ export class ArtistComponent implements OnInit {
   private cities: City[];
   private districts: District[]; 
 
-  constructor(userService: UserService) {
+  constructor(userService: UserService, private router: Router) {
     this.userService = userService;
 
    }
@@ -31,6 +33,11 @@ export class ArtistComponent implements OnInit {
     this.userService.getDistrict().then(
       districts => this.districts = districts
     );
+  }
+
+
+  create() {
+    this.router.navigate(['/create3']);
   }
 
 }
