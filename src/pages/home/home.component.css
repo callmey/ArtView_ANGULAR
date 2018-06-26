@@ -16,4 +16,52 @@
     height: 70px;
     margin: -30px auto 30px auto;
     border-color: hsl(0, 84%, 44%);
+    font-size: 20px;
   }
+
+  #ul {
+    margin-top: 10px;
+    margin-left: 18%;
+    float: relative;
+  }
+
+  li > a {
+    color:  hsl(0, 84%, 44%);
+  }
+
+  #mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+    width: 8%;
+}
+
+#about {
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+#blog {
+    top: 80px;
+    background-color: #2196F3;
+}
+
+#projects {
+    top: 140px;
+    background-color: #f44336;
+}
+
+#contact {
+    top: 200px;
+    background-color: #555
+}
