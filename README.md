@@ -22,26 +22,37 @@ Art-View ( 전시 공간 대여 및 작가 커뮤니티 관리 시스템 ) 소�
   
 # UI 설계
 
-    * 사이트 마스코트
-![] 
-(C:\Users\Dayeon\Pictures\char.jpg)
+* 사이트 마스코트
+![](https://user-images.githubusercontent.com/14903342/41904128-925706c6-7972-11e8-8695-499b490687cf.jpg)
 
-    * 메인페이지
-        + 반응형 사이드바 
-![]
+* 메인페이지
+    + 반응형 사이드바 
+![default](https://user-images.githubusercontent.com/14903342/41904217-ccef2160-7972-11e8-91b8-e29627325967.png)
 
-    * 회원가입 4단계
 
-![]
-![]
-![]
-![]
+* 회원가입 4단계
 
-    * 로그인
+![default](https://user-images.githubusercontent.com/14903342/41904281-f24c70de-7972-11e8-8ce5-802c343a7142.PNG)
 
-    * 전시목록
+![](https://user-images.githubusercontent.com/14903342/41904299-fdd16c02-7972-11e8-80b6-83909191fd66.PNG)
 
-    * 커뮤니티
+![](https://user-images.githubusercontent.com/14903342/41904834-5d1c584c-7974-11e8-8d99-c01065ea3132.png)
+
+![default](https://user-images.githubusercontent.com/14903342/41904839-60365f6e-7974-11e8-929b-9a8e2f81c2bd.png)
+
+
+ * 로그인
+
+    ![default](https://user-images.githubusercontent.com/14903342/41904372-2fdf6898-7973-11e8-92b9-408b2d86c6bf.png)
+
+* 전시목록
+
+    ![default](https://user-images.githubusercontent.com/14903342/41904391-3b110064-7973-11e8-9c58-5c99da465d53.png)
+
+* 커뮤니티
+
+    ![community](https://user-images.githubusercontent.com/14903342/41904472-75edbc86-7973-11e8-988f-aa328990afd9.png)
+
     
 
   
