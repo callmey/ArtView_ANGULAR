@@ -24,7 +24,7 @@ Art-View ( 전시 공간 대여 및 작가 커뮤니티 관리 시스템 ) 소�
 
     * 사이트 마스코트
 ![] 
-(https://drive.google.com/drive/folders/1vXZcvm71xnj0ANCuMjnMUSzzJJ6YbYew/char.jpg )
+(C:\Users\Dayeon\Pictures\char.jpg)
 
     * 메인페이지
         + 반응형 사이드바 
