@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CommunityComponent implements OnInit {
 
   constructor() { }
-
+  Arr = Array; //Array type captured in a variable
+  num:number = 4;
   ngOnInit() {
   }
 
