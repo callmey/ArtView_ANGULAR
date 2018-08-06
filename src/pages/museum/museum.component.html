@@ -1,0 +1,51 @@
+<app-nav></app-nav>
+
+<div class="container">
+  <h1>전시목록</h1>
+  <div class="pull-right mb5">
+  <a href="create.do" class="btn btn-info">
+    <span class="glyphicon glyphicon-user"></span> 전시등록</a>
+  </div>    
+  <table class="table table-bordered mt5">
+    <thead> 
+    <th>전시주제</th>
+    <th>사진</th>
+    <th>링크, 가격</th>
+    </thead> 
+    <tbody>
+      <tr *ngFor="let m of museums">   
+      <td class="panel panel-success">{{ m.title }}</td>
+      <!--<th>링크</th><td class="panel-heading"></td>-->
+      <td class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">{{m.image}}</td>
+      <td class="panel-footer">{{ m.link }} {{ m.price }}</td>
+      
+      </tr>
+    </tbody>
+    </table>
+      <!--<div cass="container">    
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
+          <div class="col-sm-4"> 
+            <div class="panel panel-danger">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
+          <div class="col-sm-4"> 
+            <div class="panel panel-success">
+              <div class="panel-heading">BLACK FRIDAY DEAL</div>
+              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+<app-footer></app-footer>

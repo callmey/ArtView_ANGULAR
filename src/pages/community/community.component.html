@@ -1,0 +1,54 @@
+<app-nav></app-nav>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="container text-center">    
+    <div class="topnav">
+      </div>
+        <div class="search-container">
+            <div class="col-sm-2" id="#select">
+                <select class="form-control">
+                    <option selected="selected">키워드검색</option>
+                    <option></option>
+                </select>
+              </div>
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+   
+      
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let i of Arr(num).fill(1)">
+        <div class="panel panel-primary">
+          <div class="panel-heading">프로젝트명</div>
+          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">D-DAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성자</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let i of Arr(num).fill(1)">
+          <div class="panel panel-primary">
+            <div class="panel-heading">프로젝트명</div>
+            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">D-DAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성자</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">&raquo;</a>
+    </div>
+</div>
+<app-footer></app-footer>
