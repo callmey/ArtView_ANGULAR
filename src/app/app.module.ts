@@ -76,6 +76,8 @@ import { SpaceList1Component } from '../pages/space-list1/space-list1.component'
       { path: 'museum', component: MuseumComponent },
       { path: 'community', component: CommunityComponent },
       { path: 'space', component: SpaceComponent },
+      { path: 'spaceList', component: SpaceList1Component },
+   
     ])
 ,
   ],
