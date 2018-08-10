@@ -31,6 +31,7 @@ import { UserComponent } from '../pages/create2/user/user.component';
 import { CommunityComponent } from '../pages/community/community.component';
 import { SpaceComponent } from '../pages/space/space.component';
 import { SpaceService } from '../services/space.service';
+import { SpaceList1Component } from '../pages/space-list1/space-list1.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { SpaceService } from '../services/space.service';
     UserComponent,
     CommunityComponent,
     SpaceComponent,
+    SpaceList1Component,
   ],
   imports: [
     BrowserModule,
