@@ -10,9 +10,10 @@ import { MatFormFieldModule, MatInputModule, MatSelectModule } from
    '@angular/material';
 
 
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from '../pages/login/login.component';
-import { HomeComponent } from '../pages/home/home.component';
+import { HomeComponent } from '../pages/Home/home.component';
 import { MuseumComponent } from '../pages/museum/museum.component';
 import { UserService } from '../services/user.service';
 import { MuseumService } from '../services/museum.service';
@@ -29,7 +30,7 @@ import { Interceptor} from './app.interceptor';
 import { UserComponent } from '../pages/create2/user/user.component';
 import { CommunityComponent } from '../pages/community/community.component';
 import { SpaceComponent } from '../pages/space/space.component';
-
+import { SpaceService } from '../services/space.service';
 
 
 @NgModule({
@@ -76,7 +77,7 @@ import { SpaceComponent } from '../pages/space/space.component';
     ])
 ,
   ],
-  providers: [UserService, MuseumService,TokenStorage,Interceptor],
+  providers: [UserService, MuseumService,TokenStorage,Interceptor, SpaceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
