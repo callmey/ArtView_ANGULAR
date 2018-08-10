@@ -1,3 +1,23 @@
-<p>
-  space-list1 works!
-</p>
+<h1>space-list1 초밥</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>link</th>
+      <th>category</th>
+      <th>description</th>
+      <th>address</th>
+      <th>roadAddress</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of spaces">
+      <td>{{ s.title }}</td>
+      <td>{{ s.link }}</td>
+      <td>{{ s.category }}</td>
+      <td>{{ s.description }}</td>
+      <td>{{ s.address }}</td>
+      <td>{{ s.roadAddress }}</td>
+    </tr>
+  </tbody>
+</table>
