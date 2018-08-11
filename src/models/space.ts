@@ -1,6 +1,5 @@
 import { City } from '../models/city';
-import { Provider } from '../models/provider';
-
+import { User } from '../models/user';
 export class Space{
 
     id : number;
@@ -11,6 +10,8 @@ export class Space{
     unavailable : Date;
     equipment :string;
     address :string;
-    city : City;
-    provider : Provider;
+    city_name : string;
+    login_id : string;
+
+
 }

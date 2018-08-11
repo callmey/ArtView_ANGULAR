@@ -4,8 +4,8 @@
     <tr>
       <th>id</th>
       <th>name</th>
-      <th>city_id</th>
-      <th>provider_id</th>
+      <th>city_name</th>
+      <th>provider_user_id</th>
       <th>cost</th>
       <th>unavailabe</th>
       <th>equipment</th>
@@ -16,8 +16,8 @@
     <tr *ngFor="let s of spaces">
       <td>{{ s.id }}</td>
       <td>{{ s.name }}</td>
-      <td>{{ s.city_id }}</td>
-      <td>{{ s.provider_id }}</td>
+      <td>{{ s.city_name }}</td>
+      <td>{{ s.login_id }}</td>
       <td>{{ s.cost }}</td>
       <td>{{ s.unavailable }}</td>
       <td>{{ s.equipment }}</td>
