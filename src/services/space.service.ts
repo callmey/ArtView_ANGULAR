@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-import { Space } from '../models/Space';
+import { NaverSpace } from '../models/naverSpace';
+import { Space } from '../models/space'
 @Injectable()
 export class SpaceService {
 
@@ -12,10 +13,18 @@ export class SpaceService {
     this.http = http;
   } 
   
-  getSpaces(keyword: string): Promise<Space[]> { 
-    return this.http.get(this.URL + "spaceDetail/" + keyword)
+
+  getSpaceList(): Promise<Space[]> { 
+    return this.http.get(this.URL + "spaceList")
     .toPromise()
     .then(response => response.json() as Space[])
+    .catch(this.handleError); 
+  } 
+
+  getNaverSpace(keyword: string): Promise<NaverSpace[]> { 
+    return this.http.get(this.URL + "spaceDetail/" + keyword)
+    .toPromise()
+    .then(response => response.json() as NaverSpace[])
     .catch(this.handleError); 
   } 
     

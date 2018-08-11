@@ -16,7 +16,7 @@ export class SpaceList1Component implements OnInit {
   } 
   
   ngOnInit() { 
-    this.spaceService.getSpaces("초밥").then( 
+    this.spaceService.getSpaceList().then( 
       spaces => this.spaces = spaces 
     ); 
   }

@@ -2,22 +2,26 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>title</th>
-      <th>link</th>
-      <th>category</th>
-      <th>description</th>
+      <th>id</th>
+      <th>name</th>
+      <th>city_id</th>
+      <th>provider_id</th>
+      <th>cost</th>
+      <th>unavailabe</th>
+      <th>equipment</th>
       <th>address</th>
-      <th>roadAddress</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let s of spaces">
-      <td>{{ s.title }}</td>
-      <td>{{ s.link }}</td>
-      <td>{{ s.category }}</td>
-      <td>{{ s.description }}</td>
-      <td>{{ s.address }}</td>
-      <td>{{ s.roadAddress }}</td>
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.city_id }}</td>
+      <td>{{ s.provider_id }}</td>
+      <td>{{ s.cost }}</td>
+      <td>{{ s.unavailable }}</td>
+      <td>{{ s.equipment }}</td>
+      <td>{{ s.address}}</td>
     </tr>
   </tbody>
 </table>

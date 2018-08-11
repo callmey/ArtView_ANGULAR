@@ -1,10 +1,11 @@
 export class Space {
 
-    title: string;
-    link: string;
-    category: string;
-    description: string;
-    telephone: string;
-    address: string;
-    roadAddress: string;
+    id : number
+    name : string
+    city_id : number
+    provider_id : number
+    cost : number
+    unavailable : Date
+    equipment :string
+    address :string
 }

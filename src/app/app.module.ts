@@ -29,7 +29,7 @@ import { TokenStorage } from '../services/token.storage';
 import { Interceptor} from './app.interceptor';
 import { UserComponent } from '../pages/create2/user/user.component';
 import { CommunityComponent } from '../pages/community/community.component';
-import { SpaceComponent } from '../pages/space/space.component';
+import { NaverSpaceComponent } from '../pages/naver-space/naver-space.component';
 import { SpaceService } from '../services/space.service';
 import { SpaceList1Component } from '../pages/space-list1/space-list1.component';
 
@@ -50,7 +50,7 @@ import { SpaceList1Component } from '../pages/space-list1/space-list1.component'
     NomalComponent,
     UserComponent,
     CommunityComponent,
-    SpaceComponent,
+    NaverSpaceComponent,
     SpaceList1Component,
   ],
   imports: [
@@ -75,7 +75,7 @@ import { SpaceList1Component } from '../pages/space-list1/space-list1.component'
       { path: 'login', component: LoginComponent },
       { path: 'museum', component: MuseumComponent },
       { path: 'community', component: CommunityComponent },
-      { path: 'space', component: SpaceComponent },
+      { path: 'naver-space', component: NaverSpaceComponent },
       { path: 'spaceList', component: SpaceList1Component },
    
     ])
