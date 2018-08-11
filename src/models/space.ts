@@ -1,4 +1,4 @@
-export class Space {
+export class Space{
 
     id : number;
     name : string;
