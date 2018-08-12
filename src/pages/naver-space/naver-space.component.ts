@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { NaverSpace } from '../../models/NaverSpace'; 
 import { SpaceService } from '../../services/space.service';
 
@@ -11,14 +12,18 @@ export class NaverSpaceComponent implements OnInit {
 
   private spaceService: SpaceService;
   private spaces: NaverSpace[]; 
-  
-  constructor(spaceService: SpaceService) { 
+  private route: ActivatedRoute;
+  constructor(spaceService: SpaceService,route: ActivatedRoute) { 
     this.spaceService = spaceService; 
+    this.route = route;
   } 
   
   ngOnInit() { 
-    this.spaceService.getNaverSpace("초밥").then( 
-      spaces => this.spaces = spaces 
-    ); 
+
+    let keyword = this.route.snapshot.params['keyword'];
+    this.spaceService
+    .getNaverSpace(keyword)
+    .then(spaces => 
+      this.spaces = spaces  );
   }
 }
