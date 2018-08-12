@@ -75,7 +75,7 @@ import { SpaceList1Component } from '../pages/space-list1/space-list1.component'
       { path: 'login', component: LoginComponent },
       { path: 'museum', component: MuseumComponent },
       { path: 'community', component: CommunityComponent },
-      { path: 'naver-space', component: NaverSpaceComponent },
+      { path: 'naver-space/:keyword', component: NaverSpaceComponent },
       { path: 'spaceList', component: SpaceList1Component },
    
     ])
