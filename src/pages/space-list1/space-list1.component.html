@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let s of spaces">
+    <tr *ngFor="let s of spaces" (click)= "gotoNaverSpace(s)">
       <td>{{ s.id }}</td>
       <td>{{ s.name }}</td>
       <td>{{ s.city_name }}</td>
