@@ -1,0 +1,28 @@
+<h1>질문 목록1</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>user_id</th>
+      <th>title</th>
+      <th>content</th>
+      <th>date</th>
+      <th>type</th>
+      <th>hits</th>
+      <th>file_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let q of questions">
+      <td>{{ q.id }}</td>
+      <td>{{ q.user_id }}</td>
+      <td>{{ q.title }}</td>
+      <td>{{ q.content }}</td>
+      <td>{{ q.date }}</td>
+      <td>{{ q.type }}</td>
+      <td>{{ q.hits }}</td>
+      <td>{{ q.file_id }}</td>
+
+    </tr>
+  </tbody>
+</table>
