@@ -33,6 +33,8 @@ import { NaverSpaceComponent } from '../pages/naver-space/naver-space.component'
 import { SpaceService } from '../services/space.service';
 import { SpaceList1Component } from '../pages/space-list1/space-list1.component';
 
+import { QnaService } from '../services/qna.service';
+import { QuestionListComponent } from '../pages/question-list/question-list.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { SpaceList1Component } from '../pages/space-list1/space-list1.component'
     CommunityComponent,
     NaverSpaceComponent,
     SpaceList1Component,
+    QuestionListComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,11 +80,12 @@ import { SpaceList1Component } from '../pages/space-list1/space-list1.component'
       { path: 'community', component: CommunityComponent },
       { path: 'naver-space/:keyword', component: NaverSpaceComponent },
       { path: 'spaceList', component: SpaceList1Component },
+      { path: 'questionList', component: QuestionListComponent },
    
     ])
 ,
   ],
-  providers: [UserService, MuseumService,TokenStorage,Interceptor, SpaceService],
+  providers: [UserService, MuseumService,TokenStorage,Interceptor, SpaceService, QnaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
