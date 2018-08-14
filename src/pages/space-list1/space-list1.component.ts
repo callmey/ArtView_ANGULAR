@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Space } from '../../models/Space'; 
+import { Space } from '../../models/space'; 
 import { SpaceService } from '../../services/space.service'
 import { Router } from '@angular/router';
 @Component({

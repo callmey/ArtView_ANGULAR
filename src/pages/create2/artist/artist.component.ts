@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { Artfield } from '../../../models/artfield';
-import { City } from '../../../models/city';
-import { District } from '../../../models/district';
+import { City } from '../../../models/City';
+import { District } from '../../../models/District';
 import { User } from '../../../models/user';
 import { Router } from '@angular/router';
 
