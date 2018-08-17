@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+//import 'rxjs/add/operator/toPromise';
 import { NaverSpace } from '../models/naverSpace';
 import { Space } from '../models/space'
+
 @Injectable()
 export class SpaceService {
 

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+//import 'rxjs/add/operator/toPromise';
 import { Question } from '../models/question';
+
 @Injectable()
 export class QnaService {
 
