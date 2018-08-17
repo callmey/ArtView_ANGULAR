@@ -1,83 +1,37 @@
 <app-nav></app-nav>
 <router-outlet></router-outlet>
 <app-user></app-user>
-    <div class="container text-center">
+<div class="container text-center">
+<form class="form-horizontal" style="margin-top:-2px;">
+        <div class="form-group">
+            <label for="focuedSelect" class="col-sm-4 control-label">대관 선호지역</label>
+            <div class="col-sm-2">
+            <select class="form-control" (ngModel)="city.id">
+                <option selected>지역(도) 선택</option>
+                <option *ngFor="let c of cities" [ngValue]="c.id" required>{{c.name}}</option>
+            </select>
+            </div>
+            <div class="col-sm-2">
+                <select class="form-control" (ngModel)="district.id">
+                    <option selected>지역(구) 선택</option>
+                    <option *ngFor="let d of districts" [ngValue]="d.id" required>{{d.name}}</option>
+                </select>
+            </div>
+        </div>     
+        <br>
         <form class="form-horizontal">
             <div class="form-group text-center">
                 <label class="col-sm-2 control-label">전공분야: </label>
-                <div class="col-sm-3">
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 공연</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 공예</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 디자인</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 문예</span></div>
-                </div> 
-                <div class="col-sm-3">
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 미술</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 사진</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 애니메이션</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 영화</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 예술가</span></div>
-                </div>
-                <div class="col-sm-3">
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 음악</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 작품</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 장르</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 창작물</span></div>
-                    <div><span> <input type="checkbox" ng-checked="isChecked"/> 평론가</span></div>
-                </div>
+                <br>
+                <br>
+                    <div *ngFor="let a of majors">
+                            <div class="col-sm-4">
+                                <div><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
+                            </div>
+                    </div>
             </div>
         </form>
-                <!--<div *ngFor="let a of majors; let i=index">
-                    <div class="col-sm-3" *ngIf="i<=5">
-                        <div><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
-                    </div>
-                    <div class="col-sm-3" *ngIf="5<i<=10">
-                        <div><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
-                    </div>
-                    <div class="col-sm-3" *ngIf="10<i<=15">
-                        <div><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
-                    </div>
-                </div>-->
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label for="focuedSelect" class="col-sm-4 control-label">대관 선호지역</label>
-                <div class="col-sm-2">
-                <select class="form-control" (ngModel)="city.id">
-                    <option selected="selected">지역(도) 선택</option>
-                    <option *ngFor="let c of cities" [ngValue]="c.id" required>{{c.name}}</option>
-                </select>
-                </div>
-                <div class="col-sm-2">
-                    <select class="form-control" (ngModel)="district.id">
-                        <option selected="selected">지역(구) 선택</option>
-                        <option *ngFor="let d of districts" [ngValue]="d.id" required>{{d.name}}</option>
-                    </select>
-                </div>
-            </div>     
-        </form>
         <a class="btn btn-primary" (click)="create()">저장</a>
-    </div>
-    <!--<div class="form-group">
-        <label class="col-sm-2 control-label">전공분야: </label>
-        <div class="col-sm-3">
-            <div *ngFor="let a of artfield"><span> <input type="checkbox" ng-checked="isChecked" (ngModel)="artist.major"/>{{a.type}}</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 공연</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 공예</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 디자인</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 문예</span></div>
-        </div>  
-        <div class="col-sm-3">
-        <div><span> <input type="checkbox" ng-checked="isChecked"/> 미술</span></div>
-        <div><span> <input type="checkbox" ng-checked="isChecked"/> 사진</span></div>
-        <div><span> <input type="checkbox" ng-checked="isChecked"/> 애니메이션</span></div>
-        <div><span> <input type="checkbox" ng-checked="isChecked"/> 영화</span></div>
-        <div><span> <input type="checkbox" ng-checked="isChecked"/> 예술가</span></div>
-        </div>
-        <div class="col-sm-3">
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 음악</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 작품</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 장르</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 창작물</span></div>
-            <div><span> <input type="checkbox" ng-checked="isChecked"/> 평론가</span></div>
-        </div>-->
+</form>
+</div>
 <app-footer></app-footer>

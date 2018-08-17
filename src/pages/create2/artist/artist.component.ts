@@ -4,6 +4,7 @@ import { Artfield } from '../../../models/artfield';
 import { City } from '../../../models/City';
 import { District } from '../../../models/District';
 import { User } from '../../../models/user';
+import { Artist } from '../../../models/artist';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,6 +17,8 @@ export class ArtistComponent implements OnInit {
   private majors: Artfield[];
   private cities: City[];
   private districts: District[]; 
+  private user: User;
+  private artist: Artist;
 
   constructor(userService: UserService, private router: Router) {
     this.userService = userService;
@@ -37,6 +40,10 @@ export class ArtistComponent implements OnInit {
 
 
   create() {
+    this.userService.SignUp(this.user)
+    .then(message => alert(message));
+    this.userService.SignUp2(this.artist)
+    .then(message => alert(message));
     this.router.navigate(['/create3']);
   }
 
