@@ -1,0 +1,48 @@
+<app-nav></app-nav>
+<router-outlet></router-outlet>
+   <div class="container text-center"><img src="/assets/images/step1.png" width="800px" height="200px"></div>
+    <div class="container text-center">
+            <form class="form-horizontal">
+              <div class="form-group text-center">
+                <label class="col-sm-4 control-label">아이디: </label>
+                <div class="col-sm-4 text-center">
+                  <input class="form-control" [(ngModel)]="user.login_id" name="login_id" type="text" placeholder="아이디를 입력하세요." required>
+                  <input type="hidden" name="user_id" value="user.login_id">
+                </div>
+                </div>
+                <div class="form-group text-center">
+                  <label  class="col-sm-4 control-label">패스워드: </label>
+                  <div class="col-sm-4 text-center">
+                    <input class="form-control "  [(ngModel)]="user.pwd" name="pwd" type="password" placeholder="비밀번호를 입력하세요." required>
+                  </div>
+                </div>
+                <div class="form-group text-center">
+                    <label class="col-sm-4 control-label">이름: </label>
+                    <div class="col-sm-4 text-center">
+                      <input class="form-control"  type="text" [(ngModel)]="user.name" name="name" required>
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                  <label class="col-sm-4 control-label">핸드폰 번호: </label>
+                  <div class="col-sm-4 text-center">
+                    <span>
+                    <input class="form-control col-sm-4" type="text" [(ngModel)]="user.phone" name="phone" required>
+                    </span>
+                  </div>  
+              </div>
+
+              <div class="form-group">
+                <label for="focuedSelect" class="col-sm-4 control-label">연령대: </label>
+                <div class="col-sm-4">
+                  <select id="focuedSelect" class="form-control" [(ngModel)]="user.age" name="age">
+                      <option selected>해당 연령층 선택</option>
+                      <option *ngFor="let a of ages" [ngValue]="a.id" required>{{a.value}}</option>
+                  </select>
+                </div>
+              </div>
+              <a class="btn btn-primary" (click)="create()">저장</a>
+      </form>
+    </div>
+<app-footer></app-footer>
+
+            

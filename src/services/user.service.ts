@@ -30,6 +30,14 @@ export class UserService {
     .catch(this.handleError);
   }
 
+  SignUp_art(artist: Artist, uid: string): Promise<string> {
+    let url = this.URL + 'sign-up/artist/' + uid;
+    return this.Http.post(url, Artist)
+    .toPromise()
+    .then(response => response.text() as string)
+    .catch(this.handleError);
+  }
+
   getAges(): Promise<Age[]> {
     return this.Http.get(this.URL + "ages")
     .toPromise()

@@ -6,9 +6,9 @@ export class User {
     phone: string;
     email: string;
     age: number;
-    //userType: number;
+    userType: number;
 
-    constructor (id, login_id, pwd, name, phone, email, age){
+    constructor (id, login_id, pwd, name, phone, email, age, userType){
             
             this.id = id;
             this.login_id = login_id;
@@ -17,6 +17,6 @@ export class User {
             this.phone = phone;
             this.email = email;
             this.age = age;
-            //this.userType = userType;
+            this.userType = userType;
     }
 }
