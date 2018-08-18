@@ -2,8 +2,8 @@ export class Age {
     id: number;
     value: string;
 
-    constructor (id, value){
+    constructor (id){
         this.id = id;
-        this.value = value;
+       
     }
 }

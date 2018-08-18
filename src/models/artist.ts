@@ -1,6 +1,6 @@
 export class Artist  {
     id: number;
-    user_id: number;
+    user_id: string;
     grouping_id: number;
     fav_city_id: number;
     fav_district_id: number;

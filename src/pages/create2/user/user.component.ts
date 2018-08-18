@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { Artfield } from '../../../models/artfield';
 import { Age } from '../../../models/age';
+import { User } from '../../../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -11,8 +13,11 @@ import { Age } from '../../../models/age';
 export class UserComponent implements OnInit {
   private artfield: Artfield[];
   private ages: Age[];
+  private user: User;
+  private router: Router;  
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, router: Router) {
+   }
 
   ngOnInit() {
     this.userService.getArtfield().then(
@@ -20,6 +25,8 @@ export class UserComponent implements OnInit {
 
     this.userService.getAges().then(
       ages => this.ages = ages);
+
+      
   }
 
 }

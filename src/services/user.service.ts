@@ -3,6 +3,7 @@ import { Http }       from '@angular/http';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginComponent } from '../pages/login/login.component';
 import { User } from '../models/user';
+import { Artist } from '../models/artist';
 import { Age } from '../models/Age';
 import { City } from '../models/City';
 import { District } from '../models/District';

@@ -6,6 +6,7 @@ import { District } from '../../../models/District';
 import { User } from '../../../models/user';
 import { Artist } from '../../../models/artist';
 import { Router } from '@angular/router';
+import { Age } from '../../../models/Age';
 
 @Component({
   selector: 'app-artist',
@@ -19,6 +20,7 @@ export class ArtistComponent implements OnInit {
   private districts: District[]; 
   private user: User;
   private artist: Artist;
+  private ages: Age[];
 
   constructor(userService: UserService, private router: Router) {
     this.userService = userService;
@@ -36,15 +38,19 @@ export class ArtistComponent implements OnInit {
     this.userService.getDistrict().then(
       districts => this.districts = districts
     );
-  }
 
+    this.userService.getAges().then(
+      ages => this.ages = ages
+    );
+
+    this.user = new User(0,"","","","","",0);
+    //this.artist = new Artist(0,"",0,0,0,0);
+
+  }
 
   create() {
     this.userService.SignUp(this.user)
     .then(message => alert(message));
-    this.userService.SignUp2(this.artist)
-    .then(message => alert(message));
     this.router.navigate(['/create3']);
   }
-
 }
