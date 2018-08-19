@@ -14,7 +14,6 @@ export class UserComponent implements OnInit {
   private artfield: Artfield[];
   private ages: Age[];
   private user: User;
-
   private user_id: string;
 
   constructor(private userService: UserService, private router: Router) {

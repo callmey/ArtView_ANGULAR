@@ -21,6 +21,8 @@ export class ArtistComponent implements OnInit {
   private user: User;
   private artist: Artist;
   private ages: Age[];
+  private user_id: string;
+
 
   constructor(userService: UserService, private router: Router) {
     this.userService = userService;
@@ -42,14 +44,12 @@ export class ArtistComponent implements OnInit {
     this.userService.getAges().then(
       ages => this.ages = ages
     );
-
-    this.user = new User(0,"","","","","",0);
-    //this.artist = new Artist(0,"",0,0,0,0);
-
+   
+    this.artist = new Artist(0,"",0,0,0,0);
   }
 
   create() {
-    this.userService.SignUp(this.user)
+    this.userService.SignUp_art(this.artist)
     .then(message => alert(message));
     this.router.navigate(['/create3']);
   }

@@ -7,10 +7,12 @@ import { HttpModule } from '@angular/http';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
+private user_id: String;
 
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

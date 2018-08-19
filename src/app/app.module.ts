@@ -27,7 +27,7 @@ import { NavComponent } from '../pages/home/nav/nav.component';
 import { FooterComponent } from '../pages/home/footer/footer.component';
 import { TokenStorage } from '../services/token.storage';
 import { Interceptor} from './app.interceptor';
-import { UserComponent } from '../pages/create2/user/user.component';
+import { UserComponent } from '../pages/user/user.component';
 import { CommunityComponent } from '../pages/community/community.component';
 import { NaverSpaceComponent } from '../pages/naver-space/naver-space.component';
 import { SpaceService } from '../services/space.service';
@@ -72,7 +72,7 @@ import { QuestionListComponent } from '../pages/question-list/question-list.comp
       { path: 'create', component: CreateComponent },
       { path: 'artist', component: ArtistComponent },
       { path: 'provider', component: ProviderComponent },
-      { path: 'normal', component: NomalComponent },
+      { path: 'user', component: UserComponent },
       { path: 'create3', component: Create3Component },
       { path: 'create4', component: Create4Component },
       { path: 'login', component: LoginComponent },
