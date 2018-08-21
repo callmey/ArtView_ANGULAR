@@ -12,7 +12,7 @@ export class ProjectService {
     this.http = http;
   }
 
-  ProjectSubmitTest(project: Project): Promise<string> {
+  projectSubmitTest(project: Project): Promise<string> {
     let url = this.URL + 'projectTest';
     return this.http.post(url, project)
               .toPromise()

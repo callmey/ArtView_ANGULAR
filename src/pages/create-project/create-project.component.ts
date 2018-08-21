@@ -18,7 +18,7 @@ export class CreateProjectComponent implements OnInit {
 
   projectSubmitTest() {
     this.projectService
-      .ProjectSubmitTest(this.project)
+      .projectSubmitTest(this.project)
       .then(message => alert(message));
   }
 
