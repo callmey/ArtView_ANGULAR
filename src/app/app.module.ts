@@ -35,6 +35,7 @@ import { SpaceList1Component } from '../pages/space-list1/space-list1.component'
 
 import { QnaService } from '../services/qna.service';
 import { QuestionListComponent } from '../pages/question-list/question-list.component';
+import { CreateProjectComponent } from '../pages/create-project/create-project.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { QuestionListComponent } from '../pages/question-list/question-list.comp
     NaverSpaceComponent,
     SpaceList1Component,
     QuestionListComponent,
+    CreateProjectComponent,
   ],
   imports: [
     BrowserModule,
