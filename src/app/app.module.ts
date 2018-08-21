@@ -83,6 +83,7 @@ import { CreateProjectComponent } from '../pages/create-project/create-project.c
       { path: 'naver-space/:keyword', component: NaverSpaceComponent },
       { path: 'spaceList', component: SpaceList1Component },
       { path: 'questionList', component: QuestionListComponent },
+      { path: 'create-project', component: CreateProjectComponent },
    
     ])
 ,
