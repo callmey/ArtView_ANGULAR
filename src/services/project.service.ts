@@ -5,15 +5,15 @@ import { Project } from '../models/project';
 
 @Injectable()
 export class ProjectService {
-  private URL = 'http://localhost:8080/studentServer/api/';
+    private URL ="http://localhost:8080/art-view/api/";
   private http: Http;
 
   constructor(http: Http) { 
     this.http = http;
   }
 
-  projectSubmitTest(project: Project): Promise<string> {
-    let url = this.URL + 'student';
+  ProjectSubmitTest(project: Project): Promise<string> {
+    let url = this.URL + 'projectTest';
     return this.http.post(url, project)
               .toPromise()
               .then(response => 
