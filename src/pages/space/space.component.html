@@ -1,0 +1,40 @@
+<app-nav></app-nav>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<p>
+  art-view DB space 상세페이지 city_id, provider_id, cost, unavailable, equipment,address,name
+</p>
+<div *ngIf="space">
+  <h1>{{space.title}}</h1>
+  <div class="form-group">
+    <label>city_id</label>
+    <input type="text" [(ngModel)]="space.city_id" class="form-control" /> </div>
+  <div class="form-group">
+    <label>provider_id</label>
+    <input type="text" [(ngModel)]="space.provider_id" class="form-control" /> </div>
+  <div class="form-group">
+    <label>cost</label>
+    <input type="text" [(ngModel)]="space.cost" class="form-control" /> </div>
+  <div class="form-group">
+    <label>unavailable</label>
+    <input type="date" [(ngModel)]="space.unavailable" class="form-control" /> </div>
+  <div class="form-group">
+    <label>equipment</label>
+    <input type="text" [(ngModel)]="space.equipment" class="form-control" /> </div>
+    <div class="form-group">
+      <label>address</label>
+      <input type="text" [(ngModel)]="space.address" class="form-control" /> </div>
+      <div class="form-group">
+        <label>name</label>
+        <input type="text" [(ngModel)]="space.name" class="form-control" /> </div>
+      
+
+
+  <div>
+      <a class="btn btn-primary" (click)="save()">저장</a>
+    <a class="btn btn-default" href="/studentList1">목록으로</a>
+  </div>
+</div>
+
+<app-footer></app-footer>

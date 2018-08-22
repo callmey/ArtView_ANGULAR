@@ -25,4 +25,10 @@ export class SpaceList1Component implements OnInit {
   gotoNaverSpace(s: Space){
     this.router.navigate(['/naver-space', s.name]);
   }
+
+  gotoSpace(s: Space ) { 
+    let id = (s) ? s.id : 0; 
+    this.router.navigate(['/dbSpaceDetail', id]);
+   }
+
 }
