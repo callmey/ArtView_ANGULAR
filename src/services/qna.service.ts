@@ -11,35 +11,43 @@ export class QnaService {
 
   constructor(http: Http) {
     this.http = http;
-  } 
+  }
 
-  getQuestionList(): Promise<Question[]> { 
+  getQuestionList(): Promise<Question[]> {
     return this.http.get(this.URL + "questionList")
-    .toPromise()
-    .then(response => response.json() as Question[])
-    .catch(this.handleError); 
-  } 
+      .toPromise()
+      .then(response => response.json() as Question[])
+      .catch(this.handleError);
+  }
 
-  getQuestion(id:number): Promise<Question> { 
+  getQuestion(id: number): Promise<Question> {
     let url = this.URL + 'questionDetail/' + id;
     return this.http.get(url)
-    .toPromise()
-    .then(response => response.json() as Question[])
-    .catch(this.handleError); 
-  } 
-  saveQuestion(question : Question ): Promise<string> { 
-    let url = this.URL + 'question/1'; 
+      .toPromise()
+      .then(response => response.json() as Question[])
+      .catch(this.handleError);
+  }
+  saveQuestion(question: Question): Promise<string> {
+    let url = this.URL + 'question/1';
     return this.http.post(url, question)
-    .toPromise() 
-    .then(response =>
-       response.text() as string) 
-       .catch(this.handleError); 
-      }
+      .toPromise()
+      .then(response =>
+        response.text() as string)
+      .catch(this.handleError);
+  }
 
+  updateQuestion(question: Question): Promise<string> {
+    let url = this.URL + 'question/2';
+    return this.http.post(url, question)
+      .toPromise()
+      .then(response =>
+        response.text() as string)
+      .catch(this.handleError);
+  }
 
-  private handleError(error: any): Promise<any> { 
+  private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only 
-    return Promise.reject(error.message || error); 
-  } 
-  
+    return Promise.reject(error.message || error);
+  }
+
 }

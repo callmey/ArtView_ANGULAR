@@ -1,6 +1,7 @@
 <app-nav></app-nav>
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <h1>질문 목록1</h1>
 <a class="btn btn-primary pull-right" (click)="gotoQuestion()">질문등록</a>
@@ -18,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let q of questions">
+    <tr *ngFor="let q of questions" (click)="selectQuestion(q)">
       <td>{{ q.id }}</td>
       <td>{{ q.user_id }}</td>
       <td>{{ q.title }}</td>
@@ -31,5 +32,24 @@
     </tr>
   </tbody>
 </table>
-
+<hr />
+<div *ngIf="selectedQuestion">
+  <div class="form-group">
+    <label>id</label>
+    <input type="text" value="{{ selectedQuestion.id }}" class="form-control" disabled /> </div>
+  <div class="form-group">
+    <label>user_id</label>
+    <input type="text" [(ngModel)]="selectedQuestion.user_id" class="form-control" /> </div>
+  <div class="form-group">
+    <label>title</label>
+    <input type="text" [(ngModel)]="selectedQuestion.title" class="form-control" /> </div>
+  <div class="form-group">
+    <label>content</label>
+    <input type="text" [(ngModel)]="selectedQuestion.content" class="form-control" /> </div>
+    <div class="form-group">
+      <label>hits</label>
+      <input type="text" [(ngModel)]="selectedQuestion.hits" class="form-control" /> </div>
+  
+      <a class="btn btn-primary" (click)="save()">수정</a>
+    </div>
 <app-footer></app-footer>

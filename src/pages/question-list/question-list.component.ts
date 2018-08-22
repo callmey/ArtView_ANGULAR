@@ -10,6 +10,8 @@ import { QnaService } from '../../services/qna.service';
 export class QuestionListComponent implements OnInit {
   private qnaService: QnaService;
    private questions: Question[]; 
+   private selectedQuestion : Question;
+  
    constructor(qnaService: QnaService, private router: Router) { 
      this.qnaService = qnaService; } 
      
@@ -21,4 +23,13 @@ export class QuestionListComponent implements OnInit {
           let id = (q) ? q.id : 0; 
           this.router.navigate(['/questionDetail', id]);
          }
+
+         selectQuestion(question : Question){
+           this.selectedQuestion =question;
+         }
+         save(){
+          this.qnaService
+          .updateQuestion(this.selectedQuestion)
+          .then(message =>alert(message));
+        }
 }
