@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http }       from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+//import 'rxjs/add/operator/toPromise';
 import { Project } from '../models/project';
 
 @Injectable()
@@ -10,6 +10,14 @@ export class ProjectService {
 
   constructor(http: Http) { 
     this.http = http;
+  }
+
+  getProject(id: number): Promise<Project> {
+    let url = this.URL + 'project/' + id;
+    return this.http.get(url)
+      .toPromise()
+      .then(response => response.json() as Project[])
+      .catch(this.handleError);
   }
 
   projectSubmitTest(project: Project): Promise<string> {
