@@ -37,6 +37,7 @@ import { QnaService } from '../services/qna.service';
 import { QuestionListComponent } from '../pages/question-list/question-list.component';
 import { CreateProjectComponent } from '../pages/create-project/create-project.component';
 import { QuestionComponent } from '../pages/question/question.component';
+import { SpaceComponent } from '../pages/space/space.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { QuestionComponent } from '../pages/question/question.component';
     QuestionListComponent,
     CreateProjectComponent,
     QuestionComponent,
+    SpaceComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +89,8 @@ import { QuestionComponent } from '../pages/question/question.component';
       { path: 'questionList', component: QuestionListComponent },
       { path: 'create-project', component: CreateProjectComponent },
       { path: 'questionDetail/:id', component: QuestionComponent},
+      { path: 'dbSpaceDetail/:id', component: SpaceComponent },
+      
     ])
 ,
   ],
