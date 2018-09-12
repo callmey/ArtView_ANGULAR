@@ -13,7 +13,7 @@ export class ProjectService {
   }
 
   getProject(id: number): Promise<Project> {
-    let url = this.URL + 'project/' + id;
+    let url = this.URL + 'projectDetail/' + id;
     return this.http.get(url)
       .toPromise()
       .then(response => response.json() as Project[])

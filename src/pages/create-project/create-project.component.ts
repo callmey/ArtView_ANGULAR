@@ -20,9 +20,9 @@ export class CreateProjectComponent implements OnInit {
 
   ngOnInit() {
     let id = this.route.snapshot.params['id']; 
-    if (id == 0){
+    if (typeof id == "undefined"){
       this.project = new Project();
-      this.project.id =0 ;
+      this.project.id = 0 ;
     }else{
       this.projectService
       .getProject(id)

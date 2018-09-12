@@ -33,6 +33,7 @@ import { NaverSpaceComponent } from '../pages/naver-space/naver-space.component'
 import { SpaceService } from '../services/space.service';
 import { SpaceList1Component } from '../pages/space-list1/space-list1.component';
 
+import { ProjectService } from '../services/project.service';
 import { QnaService } from '../services/qna.service';
 import { QuestionListComponent } from '../pages/question-list/question-list.component';
 import { CreateProjectComponent } from '../pages/create-project/create-project.component';
@@ -88,13 +89,14 @@ import { SpaceComponent } from '../pages/space/space.component';
       { path: 'spaceList', component: SpaceList1Component },
       { path: 'questionList', component: QuestionListComponent },
       { path: 'create-project', component: CreateProjectComponent },
+      { path: 'projectDetail/:id', component: CreateProjectComponent},
       { path: 'questionDetail/:id', component: QuestionComponent},
       { path: 'dbSpaceDetail/:id', component: SpaceComponent },
       
     ])
 ,
   ],
-  providers: [UserService, MuseumService,TokenStorage,Interceptor, SpaceService, QnaService],
+  providers: [UserService, MuseumService,TokenStorage,Interceptor, SpaceService, QnaService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
