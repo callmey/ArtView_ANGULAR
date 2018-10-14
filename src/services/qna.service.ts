@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 //import 'rxjs/add/operator/toPromise';
 import { Question } from '../models/question';
-
+import { Answer } from '../models/answer';
 @Injectable()
 export class QnaService {
 
@@ -44,6 +44,17 @@ export class QnaService {
         response.text() as string)
       .catch(this.handleError);
   }
+
+
+///////////////anser service//////////////
+getAnswerList(id : number): Promise<Answer[]> {
+  return this.http.get(this.URL + "answer/2/"+id)
+    .toPromise()
+    .then(response => response.json() as Answer[])
+    .catch(this.handleError);
+}
+
+
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only 
