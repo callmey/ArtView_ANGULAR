@@ -51,5 +51,39 @@
       <input type="text" [(ngModel)]="selectedQuestion.hits" class="form-control" /> </div>
   
       <a class="btn btn-primary" (click)="save()">수정</a>
+    <hr>
+
+    <div >
+      <table border="2">
+     <tbody border="1">
+      <tr>answer</tr>
+        <div style = "width:400px; height:200px;border:1px; bordercolor:pink;background-color:#fafad2" *ngFor="let q of answers">
+          <hr />
+          <tr>
+          <td style = "width:20px; border:2px"> 답변 번호{{ q.id }}</td>
+          <td>질문 번호</td>
+          <td style = "width:20px">{{ q.question_id }}</td>
+          <td>답변 날짜</td>
+          <td >{{ q.date }}</td>
+          </tr>
+          <tr style ="width:300px">
+          <td >제목</td>
+          <td> {{ q.title }}</td>
+          </tr>
+          <tr></tr>
+          <tr>
+          <td style = "width:20px; height:60px">답변 내용</td>
+          <td >{{ q.content }}</td>
+        </tr>
+        <tr>
+          <td>파일번호</td>
+          <td>{{ q.file_id }}</td>
+        </tr>
+        </div>
+      </tbody>
+    </table>
+      </div>
+
     </div>
+    
 <app-footer></app-footer>
