@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
+import { Artfield } from '../../models/artfield';
 
 @Component({
   selector: 'app-create-project',
@@ -11,6 +12,7 @@ import { ProjectService } from '../../services/project.service';
 export class CreateProjectComponent implements OnInit {
   private projectService: ProjectService;
   private project: Project;
+  private artfields: Artfield[];
   private route: ActivatedRoute;
 
   constructor(projectService: ProjectService, route: ActivatedRoute) {
@@ -28,9 +30,11 @@ export class CreateProjectComponent implements OnInit {
       .getProject(id)
       .then(project => 
         this.project = project);
-  
-      }    
     }
+    this.projectService.getArtfields().then(
+      artfields => this.artfields = artfields
+    );
+  }
 
   projectSubmitTest() {
     this.projectService

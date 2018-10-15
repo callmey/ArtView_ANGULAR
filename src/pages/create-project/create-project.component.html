@@ -44,8 +44,7 @@
         <div class="col-sm-4">
           <select id="focuedSelect" class="form-control" [(ngModel)]="project.artfield_id" name="artfield_id">
               <option selected>선택</option>
-              <option value=1>1</option>
-              <option value=2>2</option>
+              <option *ngFor="let a of artfields" [value]="a.id">{{a.type}}</option>
           </select>
         </div>
       </div>
