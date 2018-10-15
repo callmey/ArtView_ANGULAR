@@ -14,6 +14,15 @@ export class ProjectService {
     this.http = http;
   }
 
+  //프로젝트 전체 불러오기
+  getProjects(): Promise<Project[]> {
+    let url = this.URL + 'projectList'
+    return this.http.get(url)
+      .toPromise()
+      .then(response => response.json() as Project[])
+      .catch(this.handleError);
+  }
+
   getProject(id: number): Promise<Project> {
     let url = this.URL + 'projectDetail/' + id;
     return this.http.get(url)
