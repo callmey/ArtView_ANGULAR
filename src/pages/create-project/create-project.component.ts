@@ -3,6 +3,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Artfield } from '../../models/artfield';
+import { District } from '../../models/district';
 
 @Component({
   selector: 'app-create-project',
@@ -13,6 +14,7 @@ export class CreateProjectComponent implements OnInit {
   private projectService: ProjectService;
   private project: Project;
   private artfields: Artfield[];
+  private districts: District[];
   private route: ActivatedRoute;
 
   constructor(projectService: ProjectService, route: ActivatedRoute) {
@@ -33,6 +35,9 @@ export class CreateProjectComponent implements OnInit {
     }
     this.projectService.getArtfields().then(
       artfields => this.artfields = artfields
+    );
+    this.projectService.getDistricts().then(
+      districts => this.districts = districts
     );
   }
 

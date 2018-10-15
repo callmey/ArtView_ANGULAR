@@ -3,6 +3,7 @@ import { Http }       from '@angular/http';
 //import 'rxjs/add/operator/toPromise';
 import { Project } from '../models/project';
 import { Artfield } from '../models/artfield';
+import { District } from '../models/district';
 
 @Injectable()
 export class ProjectService {
@@ -29,6 +30,15 @@ export class ProjectService {
     return this.http.get(url)
     .toPromise()
     .then(response => response.json() as Artfield[])
+    .catch(this.handleError);
+  }
+
+  //지역
+  getDistricts(): Promise<District[]> {
+    let url = this.URL + 'districts';
+    return this.http.get(url)
+    .toPromise()
+    .then(response => response.json() as District[])
     .catch(this.handleError);
   }
 
