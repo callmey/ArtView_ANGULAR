@@ -18,9 +18,9 @@ export class MuseumService {
     this.http = http;
     this.httpp = httpp;
   }
-
+/*
   getMuseums(): Promise<Item[]> {
-    let url = this.URL + 'bookList';
+    let url = 'http://openapi.seoul.go.kr:8088/6367746a6b69726932304f686c5473/json/ListExhibitionOfSeoulMOAService/1/10/KOR';
     return this.http.get(url)
     .toPromise()
     .then(response => response.json() as Item[])
@@ -30,7 +30,7 @@ export class MuseumService {
    getMuseum(): Observable<any> {
     return this.httpp.get(this.URL + 'bookList'); 
   }
-
+*/
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);

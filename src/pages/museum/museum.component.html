@@ -6,46 +6,31 @@
   <a href="create.do" class="btn btn-info">
     <span class="glyphicon glyphicon-user"></span> 전시등록</a>
   </div>    
-  <table class="table table-bordered mt5">
-    <thead> 
-    <th>전시주제</th>
-    <th>사진</th>
-    <th>링크, 가격</th>
-    </thead> 
-    <tbody>
-      <tr *ngFor="let m of museums">   
-      <td class="panel panel-success">{{ m.title }}</td>
-      <!--<th>링크</th><td class="panel-heading"></td>-->
-      <td class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">{{m.image}}</td>
-      <td class="panel-footer">{{ m.link }} {{ m.price }}</td>
-      
-      </tr>
-    </tbody>
-    </table>
-      <!--<div cass="container">    
+  
+      <div class="container">    
         <div class="row">
           <div class="col-sm-4">
             <div class="panel panel-primary">
-              <div class="panel-heading">BLACK FRIDAY DEAL</div>
-              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+              <div class="panel-heading">이스트빌리지 뉴욕</div>
+              <div class="panel-body"><img src="http://sema.seoul.go.kr/common/imageView?FILE_PATH=%2Fex%2FEXI01%2F2018%2F&FILE_NM=20180716150057_ca7b8b962c2b492abe5a21d9f3bb00b2_b349160327ac4e3aa54227c6eceedf9e" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">2018-12-13~2019-02-24</div>
             </div>
           </div>
           <div class="col-sm-4"> 
             <div class="panel panel-danger">
-              <div class="panel-heading">BLACK FRIDAY DEAL</div>
-              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+              <div class="panel-heading">SeMa 조각프로젝트</div>
+              <div class="panel-body"><img src="http://sema.seoul.go.kr/common/imageView?FILE_PATH=%2Fex%2FEXI01%2F2018%2F&FILE_NM=20180716145820_d6cbebf881dd47b9a6c2a7a12ba2ff9a_07469018523642899f8a298310ae5832" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">2018-12-11~2019-02-17</div>
             </div>
           </div>
           <div class="col-sm-4"> 
             <div class="panel panel-success">
-              <div class="panel-heading">BLACK FRIDAY DEAL</div>
-              <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-              <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+              <div class="panel-heading">예술가의 텍스트</div>
+              <div class="panel-body"><img src="http://sema.seoul.go.kr/common/imageView?FILE_PATH=%2Fex%2FEXI01%2F2018%2F&FILE_NM=20180716150424_3715111c65c94d4ca7db49b992081426_42645accc79b4d73889308cc4802bb17" class="img-responsive" style="width:100%" alt="Image"></div>
+              <div class="panel-footer">2018-12-04~2019-02-03</div>
             </div>
           </div>
         </div>
-      </div>-->
+      </div>
 
 <app-footer></app-footer>

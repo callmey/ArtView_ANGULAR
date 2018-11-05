@@ -9,7 +9,7 @@ import { Item } from '../../models/item';
 })
 export class MuseumComponent implements OnInit {
   private museumService: MuseumService;
-  private museums: Item[];
+  private museums: JSON;
   
 
   constructor(museumService: MuseumService) { 
@@ -17,9 +17,7 @@ export class MuseumComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.museumService.getMuseums().then(
-      museums => this.museums = museums
-    );
+    
   }
 
 }
