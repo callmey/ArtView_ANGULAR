@@ -68,6 +68,7 @@ import { ContractComponent } from '../pages/contract/contract.component';
     ProjectDetailComponent,
     MypageComponent,
     ContractComponent,
+    ProjectDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,7 +96,7 @@ import { ContractComponent } from '../pages/contract/contract.component';
       { path: 'spaceList', component: SpaceList1Component },
       { path: 'questionList', component: QuestionListComponent },
       { path: 'create-project', component: CreateProjectComponent },
-      { path: 'projectDetail/:id', component: CreateProjectComponent},
+      { path: 'project-detail/:id', component: ProjectDetailComponent},
       { path: 'questionDetail/:id', component: QuestionComponent},
       { path: 'dbSpaceDetail/:id', component: SpaceComponent },
       { path: 'mypage', component: MypageComponent },

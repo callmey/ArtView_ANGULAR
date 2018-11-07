@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Router } from '@angular/router';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Artfield } from '../../models/artfield';
@@ -17,7 +18,7 @@ export class CreateProjectComponent implements OnInit {
   private districts: District[];
   private route: ActivatedRoute;
 
-  constructor(projectService: ProjectService, route: ActivatedRoute) {
+  constructor(projectService: ProjectService, route: ActivatedRoute, private router: Router) {
     this.projectService = projectService;
     this.route = route;
   }
@@ -45,6 +46,7 @@ export class CreateProjectComponent implements OnInit {
     this.projectService
       .projectSubmitTest(this.project)
       .then(message => alert(message));
+    this.router.navigate(['/community'])
   }
 
 }

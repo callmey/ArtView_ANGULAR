@@ -30,8 +30,7 @@
       <div class="col-sm-3" *ngFor="let p of projects">
         <div class="panel panel-primary">
           <div class="panel-heading">{{ p.title }}</div>
-          <div class="panel-body"><a routerLink="/project-detail"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a></div>
-          <div class="panel-footer">D-DAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성자</div>
+          <div class="panel-body"><img src="https://s3.ap-northeast-2.amazonaws.com/art-view/photo.jpg" class="img-responsive" style="width:100%" alt="Image" (click)="projectDetail(p)"></div>
         </div>
       </div>
     </div>

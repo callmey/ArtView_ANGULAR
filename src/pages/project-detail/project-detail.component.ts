@@ -13,8 +13,6 @@ import { District } from '../../models/district';
 export class ProjectDetailComponent implements OnInit {
   private projectService: ProjectService;
   private project: Project;
-  private artfields: Artfield[];
-  private districts: District[];
   private route: ActivatedRoute;
 
   constructor(projectService: ProjectService, route: ActivatedRoute) {

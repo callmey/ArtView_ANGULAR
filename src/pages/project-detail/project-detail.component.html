@@ -6,46 +6,42 @@
         <h1>프로젝트 상세</h1>
 </div>
 
-<div class="container text-center" *ngIf="project">
+<div class="container text-center">
     <form class="form-horizontal">
+      <div class="form-group text-center">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/art-view/photo.jpg" text-align="center" style="width:50%" alt="Image">
+      </div>
       <div class="form-group text-center">
         <label class="col-sm-4 control-label">프로젝트명: </label>
         <div class="col-sm-4 text-center">
-          <input class="form-control" [(ngModel)]="project.title" name="title" type="text" placeholder="프로젝트명을 입력하세요." required>
-        
+          <input type="text" [value]="project.title" class="form-control"/>
         </div>
         </div>
         <div class="form-group text-center">
           <label  class="col-sm-4 control-label">프로젝트 설명: </label>
           <div class="col-sm-4 text-center">
-            <textarea cols="40" rows="5" class="form-control " [(ngModel)]="project.content" name="content" required>프로젝트 설명을 입력하세요.</textarea>
+            <input type="text" [value]="project.content" class="form-control"/>
           </div>
         </div>
         <div class="form-group text-center">
             <label class="col-sm-4 control-label">마감 기한: </label>
             <div class="col-sm-4 text-center">
-              <input class="form-control"  type="date" [(ngModel)]="project.deadline" name="deadline" required>
+              <input class="form-control"  type="date" [value]="project.dead_line" name="dead_line">
             </div>
         </div>
         <div class="form-group text-center">
             <label class="col-sm-4 control-label">선호 전시시작일: </label>
             <div class="col-sm-4 text-center">
-              <input class="form-control"  type="date" [(ngModel)]="project.fav_start_date" name="fav_start_date" required>
+              <input class="form-control"  type="date" [value]="project.fav_start_date" name="fav_start_date">
             </div>
         </div>
         <div class="form-group text-center">
             <label class="col-sm-4 control-label">선호 전시종료일: </label>
             <div class="col-sm-4 text-center">
-              <input class="form-control"  type="date" [(ngModel)]="project.fav_end_date" name="fav_end_date" required>
+              <input class="form-control"  type="date" [value]="project.fav_end_date" name="fav_end_date">
             </div>
         </div>
-      <div class="form-group">
-        <label for="focuedSelect" class="col-sm-4 control-label">예술 분야: </label>
-      </div>
-      <div class="form-group">
-        <label for="focuedSelect" class="col-sm-4 control-label">지역: </label>
-      </div>
-      <input type="button" onclick="alert('신청되었습니다')"" class="btn btn-primary value="참가신청">
 </form>
+<input type="button" onclick="alert('신청되었습니다')" class="btn btn-primary" value="참가신청">
 </div>
 <app-footer></app-footer>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Router } from '@angular/router';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 
@@ -13,17 +13,19 @@ export class CommunityComponent implements OnInit {
   private projectService: ProjectService;
   private project: Project;
   private projects: Project[];
-  private route: ActivatedRoute;
 
-  constructor(projectService: ProjectService, route: ActivatedRoute) {
+  constructor(projectService: ProjectService, private router: Router) {
     this.projectService = projectService;
-    this.route = route;
   }
 
   ngOnInit() {
     this.projectService.getProjects().then(
       projects => this.projects = projects
     );
+  }
+
+  projectDetail(p: Project) {
+    this.router.navigate(['/project-detail', p.id])
   }
 
 }

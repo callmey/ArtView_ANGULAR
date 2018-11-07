@@ -23,6 +23,7 @@ export class ProjectService {
       .catch(this.handleError);
   }
 
+  //프로젝트 불러오기
   getProject(id: number): Promise<Project> {
     let url = this.URL + 'projectDetail/' + id;
     return this.http.get(url)
