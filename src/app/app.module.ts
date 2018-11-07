@@ -40,6 +40,7 @@ import { CreateProjectComponent } from '../pages/create-project/create-project.c
 import { QuestionComponent } from '../pages/question/question.component';
 import { SpaceComponent } from '../pages/space/space.component';
 import { ProjectDetailComponent } from '../pages/project-detail/project-detail.component';
+import { MypageComponent } from '../pages/mypage/mypage.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { ProjectDetailComponent } from '../pages/project-detail/project-detail.c
     QuestionComponent,
     SpaceComponent,
     ProjectDetailComponent,
+    MypageComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,6 +96,7 @@ import { ProjectDetailComponent } from '../pages/project-detail/project-detail.c
       { path: 'projectDetail/:id', component: CreateProjectComponent},
       { path: 'questionDetail/:id', component: QuestionComponent},
       { path: 'dbSpaceDetail/:id', component: SpaceComponent },
+      { path: 'mypage', component: MypageComponent },
       
     ])
 ,
