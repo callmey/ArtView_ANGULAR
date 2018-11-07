@@ -41,6 +41,7 @@ import { QuestionComponent } from '../pages/question/question.component';
 import { SpaceComponent } from '../pages/space/space.component';
 import { ProjectDetailComponent } from '../pages/project-detail/project-detail.component';
 import { MypageComponent } from '../pages/mypage/mypage.component';
+import { ContractComponent } from '../pages/contract/contract.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { MypageComponent } from '../pages/mypage/mypage.component';
     SpaceComponent,
     ProjectDetailComponent,
     MypageComponent,
+    ContractComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,6 +99,8 @@ import { MypageComponent } from '../pages/mypage/mypage.component';
       { path: 'questionDetail/:id', component: QuestionComponent},
       { path: 'dbSpaceDetail/:id', component: SpaceComponent },
       { path: 'mypage', component: MypageComponent },
+      { path: 'contract', component: ContractComponent },
+      
       
     ])
 ,
