@@ -30,7 +30,7 @@
       <div class="col-sm-3" *ngFor="let p of projects">
         <div class="panel panel-primary">
           <div class="panel-heading">{{ p.title }}</div>
-          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-body"><a routerLink="/project-detail"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a></div>
           <div class="panel-footer">D-DAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성자</div>
         </div>
       </div>
@@ -39,13 +39,6 @@
     <div class="pagination">
         <a href="#">&laquo;</a>
         <a class="active" href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-        <a href="#">7</a>
-        <a href="#">8</a>
         <a href="#">&raquo;</a>
     </div>
 </div>

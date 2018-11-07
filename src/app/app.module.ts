@@ -39,6 +39,7 @@ import { QuestionListComponent } from '../pages/question-list/question-list.comp
 import { CreateProjectComponent } from '../pages/create-project/create-project.component';
 import { QuestionComponent } from '../pages/question/question.component';
 import { SpaceComponent } from '../pages/space/space.component';
+import { ProjectDetailComponent } from '../pages/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { SpaceComponent } from '../pages/space/space.component';
     CreateProjectComponent,
     QuestionComponent,
     SpaceComponent,
+    ProjectDetailComponent,
   ],
   imports: [
     BrowserModule,
