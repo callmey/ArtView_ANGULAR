@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
-import { MatDialogModule } from '@angular/material/dialog';
+//import { MatDialogModule } from '@angular/material/dialog';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule, MatInputModule, MatSelectModule } from 
-   '@angular/material';
+//import { MatFormFieldModule, MatInputModule, MatSelectModule } from 
+  // '@angular/material';
 
 
 
@@ -76,10 +76,10 @@ import { ContractComponent } from '../pages/contract/contract.component';
     ReactiveFormsModule,
     HttpModule,
     HttpClientModule,
-    MatDialogModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatSelectModule,
+    //MatDialogModule,
+    //MatInputModule,
+    //MatFormFieldModule,
+    //MatSelectModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },

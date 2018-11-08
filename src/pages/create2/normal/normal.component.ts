@@ -5,8 +5,8 @@ import { Artist } from '../../../models/artist';
 import { Provider } from '../../../models/provider';
 import { Age } from '../../../models/Age';
 import {FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormControl} from '@angular/forms';
-import {MatDialog } from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
+//import {MatDialog } from '@angular/material';
+//import {MatInputModule} from '@angular/material/input';
 import { Router } from '@angular/router';
 
 @Component({

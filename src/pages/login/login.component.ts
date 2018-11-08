@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {MatDialog} from '@angular/material';
+//import {MatDialog} from '@angular/material';
 import {TokenStorage} from '../../services/token.storage';
 import {UserService} from '../../services/user.service';
 import {FormGroup, FormBuilder, Validators, ReactiveFormsModule} from '@angular/forms';
@@ -12,7 +12,7 @@ import {FormGroup, FormBuilder, Validators, ReactiveFormsModule} from '@angular/
 })
 export class LoginComponent {
   
-  constructor(private router: Router, public dialog: MatDialog, private userService: UserService, private token: TokenStorage) {
+  constructor(private router: Router, /*public dialog: MatDialog,*/ private userService: UserService, private token: TokenStorage) {
   }
 
   login_id: string;
